@@ -1,9 +1,9 @@
 // explore.js
 
 window.addEventListener('DOMContentLoaded', init);
+var synth = window.speechSynthesis;
 
 function init() {
-  var synth = window.speechSynthesis;
   var voices;
   var voiceSelect = document.getElementById("voice-select");
   var inputText = document.getElementById("text-to-speak");
