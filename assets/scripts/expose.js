@@ -35,7 +35,7 @@ function playHorn(event, jsConfetti) {
   if (!isNaN(hornAudio.duration)) {
     hornAudio.play();
 
-    if (hornSelect == "party-horn") {
+    if ((hornSelect == "party-horn") && (hornAudio.volume > 0)) {
       jsConfetti.addConfetti();
     }
   }
@@ -45,7 +45,7 @@ function init() {
   const jsConfetti = new JSConfetti();
 
   document.getElementById("horn-select").addEventListener("change", setHorn);
-  document.getElementById("volume").addEventListener("change", setVolume);
+  document.getElementById("volume").addEventListener("input", setVolume);
   document.getElementsByTagName("button")[0].addEventListener("click", event=> {
     playHorn(event,jsConfetti);
   });
