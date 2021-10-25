@@ -1,7 +1,7 @@
 // explore.js
 
-window.addEventListener('DOMContentLoaded', init);
 var synth = window.speechSynthesis;
+window.addEventListener('DOMContentLoaded', init);
 
 function init() {
   var voices;
@@ -27,7 +27,7 @@ function init() {
         option.setAttribute('data-name', voices[i].name);
         voiceSelect.appendChild(option);
       }
-    }, 10);
+    }, 50);
   }
 
   populateVoiceList();
