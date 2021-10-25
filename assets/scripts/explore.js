@@ -27,7 +27,7 @@ function init() {
         option.setAttribute('data-name', voices[i].name);
         voiceSelect.appendChild(option);
       }
-    }, 50);
+    }, 100);
   }
 
   populateVoiceList();
